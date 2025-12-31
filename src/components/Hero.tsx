@@ -35,8 +35,8 @@ export default function Hero() {
             {/* Left: Image Section */}
             <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
                 <Image
-                    src="/hero-house.png"
-                    alt="Beautiful suburban home"
+                    src="/hero-team.jpg"
+                    alt="Parlevu Global Team"
                     fill
                     className="object-cover"
                     priority

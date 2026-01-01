@@ -188,7 +188,7 @@ export default function Hero() {
                         </div>
                     </form>
                 </div>
+            </motion.div>
         </div>
-        </div >
     );
 }

@@ -3,6 +3,7 @@
 import { ArrowRight, Lock } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
     const [formData, setFormData] = useState({
@@ -33,7 +34,12 @@ export default function Hero() {
     return (
         <div className="relative pt-[124px] lg:pt-[136px] min-h-screen flex flex-col lg:flex-row">
             {/* Left: Image Section */}
-            <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full"
+            >
                 <Image
                     src="/hero-team.jpg"
                     alt="Parlevu Global Team"
@@ -42,21 +48,36 @@ export default function Hero() {
                     priority
                 />
                 {/* Mobile Overlay Text (Visible only on small screens if needed, otherwise rely on the right side) */}
-            </div>
+            </motion.div>
 
             {/* Right: Content & Form Section */}
-            <div className="w-full lg:w-1/2 bg-[#0f172a] text-white p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden">
+            <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="w-full lg:w-1/2 bg-[#0f172a] text-white p-8 lg:p-16 flex flex-col justify-center relative overflow-hidden"
+            >
                 {/* Background Pattern Stub */}
                 <div className="absolute inset-0 opacity-5 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
 
                 <div className="relative z-10 max-w-xl mx-auto lg:mx-0">
-                    <h1 className="text-3xl lg:text-5xl font-bold leading-tight mb-6">
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-3xl lg:text-5xl font-bold leading-tight mb-6"
+                    >
                         Simplify your home-selling journey with <span className="text-sky-400">Parlevu Global Services LLC</span>—no repairs, no fees, no stress!
-                    </h1>
+                    </motion.h1>
 
-                    <p className="text-sky-400 text-lg font-semibold mb-2">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                        className="text-sky-400 text-lg font-semibold mb-2"
+                    >
                         Fast, reliable, and cash-ready—sell your house fast today!
-                    </p>
+                    </motion.p>
 
                     <p className="text-slate-300 font-medium mb-8 uppercase tracking-wide text-sm">
                         We Buy Houses In DC, Maryland, Virginia
@@ -167,7 +188,7 @@ export default function Hero() {
                         </div>
                     </form>
                 </div>
-            </div>
         </div>
+        </div >
     );
 }

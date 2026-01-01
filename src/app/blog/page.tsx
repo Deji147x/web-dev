@@ -7,43 +7,43 @@ const POSTS = [
         title: 'We Buy Houses In Maryland: Fast, Fair, And Hassle-Free',
         excerpt: 'When life changes fast, selling your house the traditional way can feel slow, uncertain, and overwhelming. Parlevu Global Services LLC...',
         image: 'https://parlevugloballlc.com/wp-content/uploads/2025/01/We-Buy-Houses-In-Maryland-Fast-Fair-And-Hassle-Free-1024x416.png.webp',
-        slug: '#'
+        slug: 'we-buy-houses-maryland-fast-fair-hassle-free'
     },
     {
         title: 'Inherited a House in Maryland? 7 Powerful Steps to Sell Fast Without Probate Headaches',
         excerpt: '🏡 Inherited a House in Maryland? 7 Powerful Steps to Sell Fast Without Probate Headaches Inheriting a house sounds like...',
         image: 'https://parlevugloballlc.com/wp-content/uploads/2025/01/Inherited-a-House-in-Maryland-7-Powerful-Steps-to-Sell-Fast-Without-Probate-Headaches-1024x416.png.webp',
-        slug: '#'
+        slug: 'inherited-house-maryland-sell-fast-probate'
     },
     {
         title: 'Getting Started with Real Estate Investing: A Comprehensive Guide for Beginners',
         excerpt: 'Real estate investing has long been considered one of the most reliable paths to building wealth and generating passive income....',
         image: 'https://parlevugloballlc.com/wp-content/uploads/2025/01/Getting-Started-with-Real-Estate-Investing-A-Comprehensive-Guide-for-Beginners-1024x416.png.webp',
-        slug: '#'
+        slug: 'getting-started-with-real-estate-investing'
     },
     {
         title: 'How to Sell an Inherited House in Maryland Without a Realtor',
         excerpt: 'Inheriting a house in Maryland can feel both like a blessing and a burden. While property inheritance represents valuable assets,...',
         image: 'https://parlevugloballlc.com/wp-content/uploads/2025/01/How-to-Sell-an-Inherited-House-in-Maryland-Without-a-Realtor-1024x416.png.webp',
-        slug: '#'
+        slug: 'sell-inherited-house-maryland-without-realtor'
     },
     {
         title: 'Sell My House Fast in Baltimore – What Are My Options?',
         excerpt: 'Sell My House Fast in Baltimore – What Are My Options? Finding yourself in a situation where you need to...',
         image: 'https://parlevugloballlc.com/wp-content/uploads/2025/01/Sell-My-House-Fast-in-Baltimore-What-Are-My-Options-1024x416.png.webp',
-        slug: '#'
+        slug: 'sell-my-house-fast-baltimore-options'
     },
     {
         title: 'Selling Your Inherited Home in Maryland: A Complete Guide to Fast, Stress-Free Solutions',
         excerpt: 'The Hidden Burden of Inherited Property in Maryland Inheriting a home in Maryland should feel like a blessing, but for...',
         image: 'https://parlevugloballlc.com/wp-content/uploads/2025/01/Selling-Your-Inherited-Home-in-Maryland-A-Complete-Guide-to-Fast-Stress-Free-Solutions-1024x416.png.webp',
-        slug: '#'
+        slug: 'selling-inherited-home-maryland-guide'
     },
     {
         title: 'We Buy Houses in Baltimore: The Ultimate Guide to Selling Your Home Fast & Hassle-Free in 2025',
         excerpt: 'Need to sell your Baltimore home quickly? Avoid the traditional listing hassles. Learn how cash buyers offer fast closings, no...',
         image: 'https://parlevugloballlc.com/wp-content/uploads/2025/01/We-Buy-Houses-in-Baltimore-The-Ultimate-Guide-to-Selling-Your-Home-Fast-Hassle-Free-in-2025-1024x416.png.webp',
-        slug: '#'
+        slug: 'we-buy-houses-baltimore-ultimate-guide-2025'
     }
 ];
 
@@ -75,12 +75,12 @@ export default function BlogHome() {
                             <div className="p-6 flex-1 flex flex-col">
                                 <div className="text-xs text-secondary font-bold uppercase tracking-wider mb-2">Real Estate</div>
                                 <h3 className="text-xl font-bold mb-3 text-primary dark:text-white leading-snug line-clamp-2">
-                                    <a href={post.slug} className="hover:text-secondary transition-colors">{post.title}</a>
+                                    <a href={`/blog/${post.slug}`} className="hover:text-secondary transition-colors">{post.title}</a>
                                 </h3>
                                 <p className="text-slate-600 dark:text-slate-400 flex-1 line-clamp-3 mb-4 text-sm leading-relaxed">
                                     {post.excerpt}
                                 </p>
-                                <a href={post.slug} className="mt-auto text-primary font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                                <a href={`/blog/${post.slug}`} className="mt-auto text-primary font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                                     Read Article &rarr;
                                 </a>
                             </div>

@@ -8,7 +8,7 @@ import { useState } from 'react';
 // Reuse Form Logic (Simplified for this page)
 function LeadForm({ title }: { title: string }) {
     const [formData, setFormData] = useState({
-        address: '', city: 'Washington', state: 'DC', zip: '', name: '', phone: '', email: '', source: '', consent: false
+        address: '', city: '', state: 'VA', zip: '', name: '', phone: '', email: '', source: '', consent: false
     });
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -25,7 +25,7 @@ function LeadForm({ title }: { title: string }) {
             <form onSubmit={handleSubmit} className="space-y-4">
                 <input type="text" placeholder="Enter your address..." className="w-full px-4 py-3 rounded bg-white text-slate-900 border border-slate-200 focus:ring-2 focus:ring-secondary focus:outline-none" value={formData.address} onChange={(e) => setFormData({ ...formData, address: e.target.value })} required />
                 <div className="grid grid-cols-3 gap-2">
-                    <input type="text" placeholder="City" className="w-full px-4 py-3 rounded bg-white text-slate-900 border border-slate-200 focus:ring-2 focus:ring-secondary focus:outline-none" value={formData.city} disabled />
+                    <input type="text" placeholder="City" className="w-full px-4 py-3 rounded bg-white text-slate-900 border border-slate-200 focus:ring-2 focus:ring-secondary focus:outline-none" value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} required />
                     <input type="text" placeholder="State" className="w-full px-4 py-3 rounded bg-white text-slate-900 border border-slate-200 focus:ring-2 focus:ring-secondary focus:outline-none" value={formData.state} disabled />
                     <input type="text" placeholder="Zip" className="w-full px-4 py-3 rounded bg-white text-slate-900 border border-slate-200 focus:ring-2 focus:ring-secondary focus:outline-none" value={formData.zip} onChange={(e) => setFormData({ ...formData, zip: e.target.value })} required />
                 </div>
@@ -44,7 +44,7 @@ function LeadForm({ title }: { title: string }) {
     );
 }
 
-export default function DC() {
+export default function Virginia() {
     return (
         <main className="min-h-screen bg-white">
             <Navbar />
@@ -55,16 +55,16 @@ export default function DC() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 items-center relative z-10">
                     <div className="lg:w-1/2">
                         <div className="inline-block px-4 py-1 rounded-full bg-secondary/20 text-secondary text-sm font-bold mb-6 uppercase tracking-widest leading-none">
-                            Washington DC Specialists
+                            Virginia Real Estate Solutions
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                            Sell Your House Fast in <span className="text-secondary">Washington DC</span>
+                            Sell Your House Fast in <span className="text-secondary">Virginia</span>
                         </h1>
                         <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                            Looking for a reliable home buyer in the District? We buy houses as-is in NE, NW, SE, and SW Washington DC. No repairs needed, no commissions, just cash.
+                            Parlevu Global Services LLC is Virginia's most trusted home buyer. We buy houses as-is for cash, which means no repairs, no cleaning, and no agent commissions.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                            {['Inherited Rowhomes', 'Unwanted Rentals', 'Financial Difficulties', 'Estate Sales', 'Relocating', 'Avoid Foreclosure'].map(item => (
+                            {['Inherited Property', 'Tired Landlords', 'Downsizing', 'Financial Hardship', 'Relocation', 'Foreclosure'].map(item => (
                                 <div key={item} className="flex items-center gap-3 text-lg">
                                     <div className="w-6 h-6 rounded-full bg-secondary/20 flex items-center justify-center">
                                         <ArrowRight className="w-4 h-4 text-secondary" />
@@ -84,23 +84,23 @@ export default function DC() {
             <div className="py-24 bg-white">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="prose prose-lg max-w-none text-slate-800">
-                        <h2 className="text-4xl font-bold text-slate-900 mb-8">The DC Cash Home Buyer You Can Trust</h2>
-                        <p>At <strong>Parlevu Global Services LLC</strong>, we understand that selling a home in the nation's capital can be complicated. We simplify the entire process by offering a direct, cash sale.</p>
-                        <p>We're looking for houses, rowhomes, and condos in any condition. From Wards 1 to 8, we are active buyers ready to provide you with a solution that works on your timeline.</p>
+                        <h2 className="text-4xl font-bold text-slate-900 mb-8">Trusted Cash Home Buyers in Virginia</h2>
+                        <p>Are you looking to sell your house fast in Virginia? At <strong>Parlevu Global Services LLC</strong>, we specialize in helping Virginia homeowners move on from burdensome properties without the typical stress of a traditional sale.</p>
+                        <p>We buy houses, condos, and multi-family units across Virginia, from Alexandria to Richmond and beyond. Whether your house needs a complete overhaul or you just need to close quickly, we are ready to offer you a fair price.</p>
 
                         <div className="bg-slate-50 p-10 rounded-3xl border border-slate-100 my-16">
-                            <h3 className="text-2xl font-bold text-slate-900 mb-4">DC Fast Sale Benefits</h3>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">Why Sell To Us?</h3>
                             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
-                                <li className="flex items-center gap-2 m-0 font-medium">✅ Local DC Market Experts</li>
-                                <li className="flex items-center gap-2 m-0 font-medium">✅ We Handle All Cleanup</li>
-                                <li className="flex items-center gap-1 m-0 font-medium">✅ Closing in 7-14 Days</li>
-                                <li className="flex items-center gap-1 m-0 font-medium">✅ 100% Free Offer, No Obligation</li>
+                                <li className="flex items-center gap-2 m-0 font-medium">✅ Closed in as little as 7 days</li>
+                                <li className="flex items-center gap-2 m-0 font-medium">✅ No repairs or cleaning needed</li>
+                                <li className="flex items-center gap-1 m-0 font-medium">✅ No agent fees or commissions</li>
+                                <li className="flex items-center gap-1 m-0 font-medium">✅ We pay all closing costs</li>
                             </ul>
                         </div>
 
-                        <h3 className="text-3xl font-bold text-slate-900 mb-6">A Hassle-Free Experience</h3>
-                        <p>Our goal is to make your house-selling experience in Washington DC as straightforward as possible. No need to worry about inspections or financing falling through—we use our own cash and close when you're ready.</p>
-                        <p>Contact us today for a stress-free, fast home-selling experience in the District.</p>
+                        <h3 className="text-3xl font-bold text-slate-900 mb-6">Our Simple Virginia Home Selling Process</h3>
+                        <p>Selling your Virginia home to us is simple. First, fill out the form above or give us a call. We'll set up a quick walkthrough and provide you with a no-obligation cash offer. If you accept, you choose the closing date that works best for you!</p>
+                        <p>Stop worrying about the market, the inspections, or the repairs. Let Parlevu Global handle everything for you.</p>
                     </div>
                 </div>
             </div>
